@@ -1,17 +1,18 @@
 # -*- coding: utf-8 -*-
 
 # Define here the models for your scraped items
-#
-# See documentation in:
+# 定义模型的抓取项目
+# See documentation in: 参考文档
 # http://doc.scrapy.org/en/latest/topics/items.html
 
-import scrapy
+from scrapy import Item, Field
 
-class JunoCrawlerItem(scrapy.Item):
-    artist = scrapy.Field()
-    title = scrapy.Field()
-    label = scrapy.Field()
-    tracks = scrapy.Field()
-    catalog_number = scrapy.Field()
-    release_date = scrapy.Field()
-    genre = scrapy.Field()
+
+class JunoCrawlerItem(Item):
+    artist = Field()  # 艺术家
+    title = Field()  # 标题
+    label = Field()  # 标签
+    tracks = Field()  # 音轨
+    catalog_number = Field()  # 目录号
+    release_date = Field()  # 发布日期
+    genre = Field()  # 流派
